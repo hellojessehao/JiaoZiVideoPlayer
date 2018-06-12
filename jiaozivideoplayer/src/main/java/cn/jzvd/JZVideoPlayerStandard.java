@@ -212,6 +212,9 @@ public class JZVideoPlayerStandard extends JZVideoPlayer {
         changeUiToComplete();
         cancelDismissControlViewTimer();
         bottomProgressBar.setProgress(100);
+        if(onVideoFinishListener != null){
+            onVideoFinishListener.onVideoFinish();
+        }
     }
 
     @Override
@@ -838,4 +841,15 @@ public class JZVideoPlayerStandard extends JZVideoPlayer {
             dissmissControlView();
         }
     }
+
+    private OnVideoFinishListener onVideoFinishListener;
+
+    public void setOnVideoFinishListener(OnVideoFinishListener listener){
+        this.onVideoFinishListener = listener;
+    }
+
+    public interface OnVideoFinishListener{
+        void onVideoFinish();
+    }
+
 }
