@@ -28,11 +28,12 @@ uploadArchives {
     repositories {
         mavenDeployer {
             beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
+            repository(url: "file://localhost/tmp/myRepo/")
 
-            repository(url: "https://oss.sonatype.org/service/local/staging/deploy/maven2/") {
-                authentication(userName: getProperty('ossrhUsername'),
-                                  password: getProperty('ossrhPassword'))
-            }
+//            repository(url: "https://oss.sonatype.org/service/local/staging/deploy/maven2/") {
+//                authentication(userName: getProperty('ossrhUsername'),
+//                                  password: getProperty('ossrhPassword'))
+//            }
 
             pom.project {
                 name 'jiaozivideoplayer'
