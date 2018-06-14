@@ -136,7 +136,6 @@
             android:layout_toEndOf="@+id/back"
             android:layout_toLeftOf="@+id/battery_time_layout"
             android:layout_toRightOf="@+id/back"
-            android:background="#333333"
             android:ellipsize="end"
             android:maxLines="2"
             android:textColor="#ffffff"
@@ -189,7 +188,6 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:layout_gravity="center_vertical"
-        android:background="#333333"
         >
 
         <ImageView
